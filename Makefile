@@ -1,5 +1,5 @@
 install:
-	pip install --upgrade pip && pip install -r requirements.txt 
+	pip install --upgrade pip && pip install -r requirements.txt
 
 format:
 	black *.py
@@ -10,4 +10,12 @@ lint:
 test:
 	python -m pytest -cov=main test_main.py
 
-all: install format lint test
+generate:
+	python main.py
+	git config --local user.email "action@github.com"
+	git config --local user.name "GitHub Action"
+	git add .
+	git commit -m "test"
+	git push
+
+all: install format lint test generate
