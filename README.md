@@ -1,8 +1,10 @@
-# Leo_Chen_Template
+# Leo_Chen_Mini_2
 
-[![CI](https://github.com/nogibjj/Leo_Chen_Template/actions/workflows/hello.yml/badge.svg)](https://github.com/nogibjj/Leo_Chen_Template/actions/workflows/hello.yml)
+[![CI](https://github.com/nogibjj/Leo_Chen_Mini_2/actions/workflows/hello.yml/badge.svg)](https://github.com/nogibjj/Leo_Chen_Mini_2/actions/workflows/hello.yml)
 
-This repository hosts my submission for the Create Python Template assignment. To use this template, connect to a GitHub Codespace and allow the devcontainer to execute the Makefile, which will perform the following tasks: install, format, lint, and test.
+Python script using Pandas for descriptive statistics
+
+A summary report that includes summary statistics and a histogram will be generated during runtime.
 
 Repository Contents:
 
@@ -20,10 +22,6 @@ Repository Contents:
 
 * `README.md`
 
-## Project Objective
-
-The goal of this project is to provide a Python template that includes a `main.py` file with a function named `square_number(x)`. This function takes a number as input and returns its square. The functionality of this function is verified through tests in the `test_main.py` file.
-
 ## Setup Instructions
 
 1. Open codespaces
@@ -34,4 +32,8 @@ The goal of this project is to provide a Python template that includes a `main.p
 
 ## Result
 
-![result](1.png)
+See generated summary_report.md for best result.
+
+Attaching the histogram below for quick reference.
+
+![histogram](bed_hist.png)
