@@ -1,9 +1,13 @@
-import pandas as pd
+import polars as pl
 import matplotlib.pyplot as plt
 
-df = pd.read_csv(
+df = pl.read_csv(
     "https://raw.githubusercontent.com/fivethirtyeight/data/master/covid-geography/mmsa-icu-beds.csv"
 )
+df = df.filter(pl.col("icu_beds") != "NA").with_columns(
+    pl.col("icu_beds").cast(pl.Int64)
+)
+
 
 # summary statistics (mean, median, standard deviation)
 def statistics(p=False):
@@ -33,7 +37,7 @@ def count_row():
 # visualization
 def create_hist():
     plt.figure(figsize=(10, 6))
-    plt.hist(df["icu_beds"], bins=25, color="orange", edgecolor="black")
+    plt.hist(df["icu_beds"].to_list(), bins=25, color="orange", edgecolor="black")
     plt.title("ICU Beds Histogram", fontsize=16)
     plt.xlabel("Number of ICU Beds in the Area", fontsize=12)
     plt.ylabel("Frequency", fontsize=12)

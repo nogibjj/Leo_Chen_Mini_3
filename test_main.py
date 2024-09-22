@@ -8,7 +8,7 @@ def test_count_col():
 
 def test_count_row():
     num_row = count_row()
-    assert num_row == 136
+    assert num_row == 135
 
 
 def test_statistics():
